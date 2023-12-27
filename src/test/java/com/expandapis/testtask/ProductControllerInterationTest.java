@@ -42,7 +42,6 @@ class ProductControllerInterationTest {
                 .andReturn()
                 .getResponse()
                 .getContentAsString();
-        System.out.println(token);
     }
 
     @Test

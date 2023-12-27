@@ -79,10 +79,19 @@
     </dependencies>
 
     <build>
+        <finalName>expandapis-test-task</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <mainClass>com.expandapis.testtask.ExpandApisTestTaskApplication</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

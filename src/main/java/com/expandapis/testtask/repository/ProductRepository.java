@@ -63,8 +63,8 @@ public class ProductRepository {
     }
 
     public Object findAll() {
-        if (!entityManager.createNativeQuery("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PRODUCTS';").getResultList().isEmpty()) {
-            return entityManager.createNativeQuery("SELECT * FROM PRODUCTS").getResultList();
+        if (!entityManager.createNativeQuery("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'products';").getResultList().isEmpty()) {
+            return entityManager.createNativeQuery("SELECT * FROM products").getResultList();
         } else {
             throw new InvalidDataAccessApiUsageException("Table products doesn't exist.");
         }

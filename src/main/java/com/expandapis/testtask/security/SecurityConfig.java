@@ -43,7 +43,7 @@ public class SecurityConfig {
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(
                         auth -> auth
-                                .requestMatchers("/user/**")
+                                .requestMatchers("/user/**", "/error/**")
                                 .permitAll()
                                 .anyRequest().authenticated()
                 ).addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
